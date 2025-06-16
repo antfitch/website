@@ -12,8 +12,7 @@ Physics simulations can make app interactions feel realistic and interactive.
 For example, you might want to animate a widget to act as if it were attached to
 a spring or falling with gravity.
 
-This recipe demonstrates how to move a widget from a dragged point back to the
-center using a spring simulation.
+This recipe demonstrates how to move a widget from a dragged point back to the center using a spring simulation.
 
 This recipe uses these steps:
 
@@ -74,10 +73,7 @@ class _DraggableCardState extends State<DraggableCard> {
 }
 ```
 
-Make the `_DraggableCardState` class extend from
-[SingleTickerProviderStateMixin][].
-Then construct an [AnimationController][] in
-`initState` and set `vsync` to `this`.
+Make the `_DraggableCardState` class extend [SingleTickerProviderStateMixin][]. Then construct an [AnimationController][] in `initState` and set `vsync` to `this`.
 
 :::note
 Extending `SingleTickerProviderStateMixin` allows the state object to be a
@@ -195,7 +191,7 @@ value:
   }
 ```
 
-Next, make the `Align` widget use the `_dragAlignment` field:
+Next, use the `_dragAlignment` field in the `Align` widget:
 
 <?code-excerpt "lib/step3.dart (align)"?>
 ```dart
@@ -225,8 +221,7 @@ Finally, update the `GestureDetector` to manage the animation controller:
 
 ## Step 4: Calculate the velocity to simulate a springing motion
 
-The last step is to do a little math, to calculate the velocity of the widget
-after it's finished being dragged. This is so that the widget realistically
+The last step is to do a little math to calculate the velocity of the widget after it's finished being dragged. This is so that the widget realistically
 continues at that speed before being snapped back. (The `_runAnimation` method
 already sets the direction by setting the animation's start and end alignment.)
 
@@ -279,8 +274,7 @@ onPanEnd: (details) {
 ```
 
 :::note
-Now that the animation controller uses a simulation it's `duration` argument
-is no longer required.
+Now that the animation controller uses a simulation, its `duration` argument is no longer required.
 :::
 
 ## Interactive Example
@@ -306,7 +300,7 @@ class PhysicsCardDragDemo extends StatelessWidget {
   }
 }
 
-/// A draggable card that moves back to [Alignment.center] when it's
+/// A draggable card that moves back to [Alignment.center] when it is
 /// released.
 class DraggableCard extends StatefulWidget {
   const DraggableCard({required this.child, super.key});
