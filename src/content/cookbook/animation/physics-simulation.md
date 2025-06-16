@@ -15,7 +15,7 @@ a spring or falling with gravity.
 This recipe demonstrates how to move a widget from a dragged point back to the
 center using a spring simulation.
 
-This recipe uses these steps:
+This recipe involves the following steps:
 
 1. Set up an animation controller
 2. Move the widget using gestures
