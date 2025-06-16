@@ -265,7 +265,7 @@ void _runAnimation(Offset pixelsPerSecond, Size size) {
 
   final simulation = SpringSimulation(spring, 0, 1, -unitVelocity);
 
-  _controller.animateWith(simulation);
+  __controller.animateWith(simulation);
 }
 ```
 
@@ -346,7 +346,7 @@ class _DraggableCardState extends State<DraggableCard>
 
     final simulation = SpringSimulation(spring, 0, 1, -unitVelocity);
 
-    _controller.animateWith(simulation);
+    __controller.animateWith(simulation);
   }
 
   @override
