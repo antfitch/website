@@ -20,7 +20,7 @@ This recipe uses these steps:
 1. Set up an animation controller
 2. Move the widget using gestures
 3. Animate the widget
-4. Calculate the velocity to simulate a springing motion
+4. Calculate the velocity to simulate a spring motion
 
 
 ## Step 1: Set up an animation controller
@@ -223,10 +223,9 @@ Finally, update the `GestureDetector` to manage the animation controller:
     child: Align(
 ```
 
-## Step 4: Calculate the velocity to simulate a springing motion
+## Step 4: Calculate the velocity to simulate a spring motion
 
-The last step is to do a little math, to calculate the velocity of the widget
-after it's finished being dragged. This is so that the widget realistically
+The last step is to do a little math to calculate the widget's velocity after it finishes being dragged. This is so that the widget realistically
 continues at that speed before being snapped back. (The `_runAnimation` method
 already sets the direction by setting the animation's start and end alignment.)
 
@@ -279,8 +278,7 @@ onPanEnd: (details) {
 ```
 
 :::note
-Now that the animation controller uses a simulation it's `duration` argument
-is no longer required.
+Now that the animation controller uses a simulation, its `duration` argument is no longer required.
 :::
 
 ## Interactive Example
