@@ -25,7 +25,7 @@ This recipe uses these steps:
 
 ## Step 1: Set up an animation controller
 
-Start with a stateful widget called `DraggableCard`:
+Start with a stateful widget called `DraggableCard`.
 
 <?code-excerpt "lib/starter.dart"?>
 ```dart
@@ -74,10 +74,7 @@ class _DraggableCardState extends State<DraggableCard> {
 }
 ```
 
-Make the `_DraggableCardState` class extend from
-[SingleTickerProviderStateMixin][].
-Then construct an [AnimationController][] in
-`initState` and set `vsync` to `this`.
+Make the `_DraggableCardState` class extend [SingleTickerProviderStateMixin][]. Then construct an [AnimationController][] in `initState` and set `vsync` to `this`.
 
 :::note
 Extending `SingleTickerProviderStateMixin` allows the state object to be a
@@ -225,10 +222,7 @@ Finally, update the `GestureDetector` to manage the animation controller:
 
 ## Step 4: Calculate the velocity to simulate a springing motion
 
-The last step is to do a little math, to calculate the velocity of the widget
-after it's finished being dragged. This is so that the widget realistically
-continues at that speed before being snapped back. (The `_runAnimation` method
-already sets the direction by setting the animation's start and end alignment.)
+The last step is to perform a calculation to determine the velocity of the widget after it finishes being dragged. This allows the widget to realistically continue moving at that speed before being snapped back. (The `_runAnimation` method already sets the direction by setting the animation's start and end alignment.)
 
 First, import the `physics` package:
 
@@ -279,8 +273,7 @@ onPanEnd: (details) {
 ```
 
 :::note
-Now that the animation controller uses a simulation it's `duration` argument
-is no longer required.
+Now that the animation controller uses a simulation, its `duration` argument is no longer required.
 :::
 
 ## Interactive Example
